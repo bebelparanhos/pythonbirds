@@ -1,4 +1,6 @@
 class Pessoa:
+    #atributo de classe
+    olhos = 2
     def __init__(self, *filhos, nome=None, idade=43):
         self.idade = idade
         self.nome = nome
@@ -25,3 +27,13 @@ if __name__ == '__main__':
     #atributos dinamicos
     isabel.sobrenome = 'Paranhos'
     print(isabel.sobrenome)
+
+    print(isabel.__dict__)
+    print(alex.__dict__)
+
+    del isabel.sobrenome
+    print(isabel.__dict__)
+
+    print(Pessoa.olhos)
+    print(isabel.olhos)
+    print(alex.olhos)
