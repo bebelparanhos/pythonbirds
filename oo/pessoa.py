@@ -2,6 +2,8 @@ class Pessoa:
     def __init__(self, *filhos, nome=None, idade=43):
         self.idade = idade
         self.nome = nome
+
+        #atributos complexos
         self.filhos = list(filhos)
 
     def cumprimentar(self):
@@ -20,3 +22,6 @@ if __name__ == '__main__':
     for filho in isabel.filhos:
         print(filho.nome)
 
+    #atributos dinamicos
+    isabel.sobrenome = 'Paranhos'
+    print(isabel.sobrenome)
